@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="options.css"/>
+    <script type="text/javascript" src="options.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <div style="display:inline-block;">
+
+        <div class="itemDiv">
+          <div class="col">
+            <label data-l10n-id="contextMenuItems">Context menu items:</label>
+          </div>
+          <div class="col">
+            <div>
+              <input type="checkbox" id="openThisLink">
+              <label for="openThisLink" data-l10n-id="openThisLink">Open this link in pop-up window</label>
+            </div>
+            <div>
+              <input type="checkbox" id="moveThisPage">
+              <label for="moveThisPage" data-l10n-id="moveThisPage">Move current page to pop-up window</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="itemDiv">
+          <label data-l10n-id="defaultPosition">Default pop-up window position</label>
+          <select id="defaultPosition" type="option">
+            <option value="0" data-l10n-id="center">Center</option>
+            <option value="1" data-l10n-id="topLeft">Top left corner</option>
+            <option value="2" data-l10n-id="bottomLeft">Bottom left corner</option>
+            <option value="3" data-l10n-id="topRight">Top right corner</option>
+            <option value="4" data-l10n-id="bottomRight">Bottom right corner</option>
+          </select>
+        </div>
+
+        <div class="itemDiv">
+          <div id="iconColor" type="radioGroup">
+            <label data-l10n-id="iconColor">Toolbar button icon color</label>
+            <input type="radio" id="iconColorBlack" name="iconColor" value="0">
+            <label for="iconColorBlack" data-l10n-id="iconColorBlack">Black</label>
+            <input type="radio" id="iconColorWhite" name="iconColor" value="1">
+            <label for="iconColorWhite" data-l10n-id="iconColorWhite">White</label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+div.col {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.itemDiv {
+  display: block;
+  margin-top:4px;
+}
+
+.itemLabel {
+  display: inline-block;
+  width: 60px;
+}
+
+select.itemInput {
+  display: inline-block;
+  width: 250px;
+  margin-left:12px;
+}
