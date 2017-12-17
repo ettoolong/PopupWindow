@@ -94,7 +94,7 @@ const createContextMenu = (mode) => {
 };
 
 const resetContextMenu = (type) => {
-  if (preferences.moveThisTab) {
+  if (preferences.moveThisPage) {
     createContextMenu(type);
   } else {
     if(menu_moveThisPage !== null) {
