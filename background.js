@@ -4,7 +4,7 @@ let defaultPreference = {
   moveThisPage: true,
   moveThisTab: false,
   iconColor: 0, //0:black, 1:white
-  version: 1
+  version: 2
 };
 let preferences = {};
 let menu_openThisLink = null;
