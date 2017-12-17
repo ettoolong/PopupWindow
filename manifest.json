@@ -2,7 +2,7 @@
   "description": "__MSG_extDescription__",
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "homepage_url": "https://github.com/ettoolong/PopupWindow",
   "icons": {
     "16": "icon/icon.svg",
@@ -14,7 +14,7 @@
   "applications": {
     "gecko": {
       "id": "PopupWindow@ettoolong",
-      "strict_min_version": "51.0"
+      "strict_min_version": "53.0"
     }
   },
   "developer": {

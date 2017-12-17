@@ -12,22 +12,30 @@
 		"description": ""
   },
   "actionButtonTitle": {
-		"message": "將目前頁面彈出至獨立視窗",
+		"message": "將目前分頁彈出至獨立視窗",
 		"description": ""
   },
   "contextMenuItems": {
 		"message": "右鍵選單項目:",
 		"description": ""
 	},
-  "openThisLink": {
+  "tabMenu": {
+		"message": "分頁右鍵選單",
+		"description": ""
+	},
+	"openThisLink": {
 		"message": "將此連結彈出至獨立視窗",
 		"description": ""
 	},
 	"moveThisPage": {
-		"message": "將目前頁面彈出至獨立視窗",
+		"message": "彈出/合併 目前頁面",
 		"description": ""
 	},
-  "defaultPosition": {
+	"moveThisTab": {
+		"message": "將目前分頁彈出至獨立視窗",
+		"description": ""
+	},
+	"defaultPosition": {
 		"message": "預設視窗位置",
 		"description": ""
 	},

@@ -12,22 +12,30 @@
 		"description": ""
 	},
   "actionButtonTitle": {
-		"message": "Move current page to pop-up window",
+		"message": "Move current tab to pop-up window",
 		"description": ""
   },
   "contextMenuItems": {
 		"message": "Context menu items:",
 		"description": ""
 	},
-  "openThisLink": {
+  "tabMenu": {
+		"message": "Tab menu item",
+		"description": ""
+	},
+	"openThisLink": {
 		"message": "Open this link in pop-up window",
 		"description": ""
 	},
 	"moveThisPage": {
-		"message": "Move current page to pop-up window",
+		"message": "pop-up/merge current page",
 		"description": ""
 	},
-  "defaultPosition": {
+	"moveThisTab": {
+		"message": "Move current tab to pop-up window",
+		"description": ""
+	},
+	"defaultPosition": {
 		"message": "Default pop-up window position",
 		"description": ""
 	},

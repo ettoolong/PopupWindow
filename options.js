@@ -3,7 +3,7 @@ let currentPrefs = {};
 const saveToPreference = (id, value) => {
   let update = {};
   update[id] = value;
-  browser.storage.local.set(update).then(null, err => {});
+  chrome.storage.local.set(update);
 };
 
 const handleVelueChange = id => {
@@ -68,12 +68,12 @@ const init = preferences => {
   }
   let l10nTags = Array.from(document.querySelectorAll('[data-l10n-id]'));
   l10nTags.forEach(tag => {
-    tag.textContent = browser.i18n.getMessage(tag.getAttribute('data-l10n-id'));
+    tag.textContent = chrome.i18n.getMessage(tag.getAttribute('data-l10n-id'));
   });
 };
 
 window.addEventListener('load', event => {
-  browser.storage.local.get().then(results => {
+  chrome.storage.local.get(results => {
     if ((typeof results.length === 'number') && (results.length > 0)) {
       results = results[0];
     }
