@@ -2,14 +2,12 @@ let defaultPreference = {
   defaultPosition: 0,
   openThisLink: true,
   moveThisPage: true,
-  moveThisTab: false,
-  iconColor: 0, //0:black, 1:white
+  //iconColor: 0, //0:black, 1:white
   version: 2
 };
 let preferences = {};
 let menu_openThisLink = null;
 let menu_moveThisPage = null;
-let menu_moveThisTab = null;
 let winMapping = new Map;
 let popupMapping = new Map;
 
@@ -19,17 +17,14 @@ const storageChangeHandler = (changes, area) => {
     for (let item of changedItems) {
       preferences[item] = changes[item].newValue;
       switch (item) {
-        case 'iconColor':
-          setBrowserActionIcon();
-          break;
+        // case 'iconColor':
+        //   setBrowserActionIcon();
+        //   break;
         case 'openThisLink':
           resetLinkMenu();
           break;
         case 'moveThisPage':
           resetContextMenu();
-          break;
-        case 'moveThisTab':
-          resetTabMenu();
           break;
       }
     }
@@ -66,9 +61,8 @@ const loadPreference = () => {
     }
 
     resetLinkMenu();
-    resetTabMenu();
     resetContextMenu();
-    setBrowserActionIcon();
+    //setBrowserActionIcon();
   });
 };
 
@@ -132,40 +126,14 @@ const resetLinkMenu = () => {
   }
 };
 
-const createTabMenu = () => {
-  if(menu_moveThisTab)
-    return;
-  menu_moveThisTab = chrome.contextMenus.create({
-    type: 'normal',
-    title: chrome.i18n.getMessage('moveThisTab'),
-    contexts: ['tab'],
-    onclick: (data, tab) => {
-      popupWindow(tab);
-    }
-  });
-}
-
-const resetTabMenu = () => {
-  if (preferences.moveThisTab) {
-    createTabMenu();
-  }
-  else {
-    if(menu_moveThisTab !== null) {
-      chrome.contextMenus.remove(menu_moveThisTab, () => {
-        menu_moveThisTab = null;
-      });
-    }
-  }
-};
-
-const setBrowserActionIcon = () => {
-  if(preferences.iconColor === 1) {
-    chrome.browserAction.setIcon({path: 'icon/icon_w.svg'});
-  }
-  else {
-    chrome.browserAction.setIcon({path: 'icon/icon.svg'});
-  }
-};
+// const setBrowserActionIcon = () => {
+//   if(preferences.iconColor === 1) {
+//     chrome.browserAction.setIcon({path: 'icon/icon_w.png'});
+//   }
+//   else {
+//     chrome.browserAction.setIcon({path: 'icon/icon.png'});
+//   }
+// };
 
 const popupWindow = (tab, targetUrl) => {
   let screen = window.screen;

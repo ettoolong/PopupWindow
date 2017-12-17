@@ -11,7 +11,7 @@ const handleVelueChange = id => {
   if(elem) {
     let elemType = elem.getAttribute('type');
     if(elemType === 'checkbox') {
-      elem.addEventListener('input', event => {
+      elem.addEventListener('click', event => {
         saveToPreference(id, elem.checked ? true : false);
       });
     }
@@ -23,7 +23,7 @@ const handleVelueChange = id => {
     else if(elemType === 'radioGroup') {
       let radios = Array.from(elem.querySelectorAll('input[name='+id+']'));
       for(let radio of radios) {
-        radio.addEventListener('input', event => {
+        radio.addEventListener('click', event => {
           if(radio.checked)
             saveToPreference(id, parseInt(radio.getAttribute('value')));
         });

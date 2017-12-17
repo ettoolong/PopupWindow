@@ -5,22 +5,13 @@
   "version": "0.0.3",
   "homepage_url": "https://github.com/ettoolong/PopupWindow",
   "icons": {
-    "16": "icon/icon.svg",
-    "32": "icon/icon.svg",
-    "48": "icon/icon.svg",
-    "64": "icon/icon.svg",
-    "96": "icon/icon.svg"
+    "16": "icon/icon.png",
+    "32": "icon/icon.png",
+    "48": "icon/icon.png",
+    "64": "icon/icon.png",
+    "96": "icon/icon.png"
   },
-  "applications": {
-    "gecko": {
-      "id": "PopupWindow@ettoolong",
-      "strict_min_version": "53.0"
-    }
-  },
-  "developer": {
-    "name": "Ett Chung",
-    "url": "https://github.com/ettoolong/PopupWindow"
-  },
+  "author": "Ett Chung",
   "background": {
     "scripts": ["background.js"]
   },
@@ -32,12 +23,11 @@
   "browser_action": {
     "browser_style": true,
     "default_title": "__MSG_actionButtonTitle__",
-    "default_icon": "icon/icon.svg"
+    "default_icon": "icon/icon.png"
   },
   "default_locale": "en",
   "options_ui": {
     "page": "options.html",
-    "open_in_tab": false,
-    "browser_style": true
+    "open_in_tab": false
   }
 }
