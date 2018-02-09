@@ -59,6 +59,14 @@
 		"message": "右下角",
 		"description": ""
   },
+	"windowWidth": {
+		"message": "預設視窗寬度",
+		"description": ""
+	},
+	"windowHeight": {
+		"message": "預設視窗高度",
+		"description": ""
+	},
 	"iconColor": {
 		"message": "工具列圖示顏色",
 		"description": ""

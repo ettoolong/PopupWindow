@@ -20,6 +20,11 @@ const handleVelueChange = id => {
         saveToPreference(id, parseInt(elem.value));
       });
     }
+    else if(elemType === 'number') {
+      elem.addEventListener('input', event => {
+        saveToPreference(id, parseInt(elem.value));
+      });
+    }
     else if(elemType === 'radioGroup') {
       let radios = Array.from(elem.querySelectorAll('input[name='+id+']'));
       for(let radio of radios) {
@@ -47,6 +52,9 @@ const setValueToElem = (id, value) => {
           break;
         }
       }
+    }
+    else if(elemType === 'number') {
+      elem.value = value;
     }
     else if(elemType === 'radioGroup') {
       let radios = Array.from(elem.querySelectorAll('input[name='+id+']'));

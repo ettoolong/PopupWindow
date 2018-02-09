@@ -59,6 +59,14 @@
 		"message": "Bottom right corner",
 		"description": ""
   },
+	"windowWidth": {
+		"message": "Default pop-up window width",
+		"description": ""
+	},
+	"windowHeight": {
+		"message": "Default pop-up window height",
+		"description": ""
+	},
 	"iconColor": {
 		"message": "Toolbar button icon color",
 		"description": ""

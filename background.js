@@ -1,9 +1,11 @@
 let defaultPreference = {
   defaultPosition: 0,
+  windowWidth: 500,
+  windowHeight: 400,
   openThisLink: true,
   moveThisPage: true,
   //iconColor: 0, //0:black, 1:white
-  version: 2
+  version: 3
 };
 let preferences = {};
 let menu_openThisLink = null;
@@ -56,6 +58,7 @@ const loadPreference = () => {
         }
       }
       if(needUpdate) {
+        update.version = defaultPreference.version;
         chrome.storage.local.set(update);
       }
     }
@@ -137,8 +140,8 @@ const resetLinkMenu = () => {
 
 const popupWindow = (tab, targetUrl) => {
   let screen = window.screen;
-  let width = 500;
-  let height = 400;
+  let width = preferences.windowWidth;
+  let height = preferences.windowHeight;
 
   let top = screen.availTop !== undefined ? screen.availTop: screen.top;
   let left = screen.availLeft !== undefined ? screen.availLeft: screen.left;
