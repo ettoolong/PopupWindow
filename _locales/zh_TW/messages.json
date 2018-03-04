@@ -1,82 +1,82 @@
 {
-	"extName": {
-		"message": "Popup window",
-		"description": ""
-	},
-	"extDescription": {
-		"message": "將 Tab 彈出至獨立視窗，去除頁籤列、網址列和書籤列等介面",
-		"description": ""
-	},
-	"optionPageTitle": {
-		"message": "Popup window 設定頁",
-		"description": ""
+  "extName": {
+    "message": "Popup window",
+    "description": ""
+  },
+  "extDescription": {
+    "message": "將 Tab 彈出至獨立視窗，去除頁籤列、網址列和書籤列等介面",
+    "description": ""
+  },
+  "optionPageTitle": {
+    "message": "Popup window 設定頁",
+    "description": ""
   },
   "actionButtonTitle": {
-		"message": "將目前分頁彈出至獨立視窗",
-		"description": ""
+    "message": "將目前分頁彈出至獨立視窗",
+    "description": ""
   },
   "contextMenuItems": {
-		"message": "右鍵選單項目:",
-		"description": ""
-	},
+    "message": "右鍵選單項目:",
+    "description": ""
+  },
   "tabMenu": {
-		"message": "分頁右鍵選單",
-		"description": ""
-	},
-	"openThisLink": {
-		"message": "將此連結彈出至獨立視窗",
-		"description": ""
-	},
-	"moveThisPage": {
-		"message": "彈出/合併 目前頁面",
-		"description": ""
-	},
-	"moveThisTab": {
-		"message": "將目前分頁彈出至獨立視窗",
-		"description": ""
-	},
-	"defaultPosition": {
-		"message": "預設視窗位置",
-		"description": ""
-	},
+    "message": "分頁右鍵選單",
+    "description": ""
+  },
+  "openThisLink": {
+  "message": "將此連結彈出至獨立視窗",
+    "description": ""
+  },
+  "moveThisPage": {
+    "message": "彈出/合併 目前頁面",
+    "description": ""
+  },
+  "moveThisTab": {
+    "message": "將目前分頁彈出至獨立視窗",
+    "description": ""
+  },
+  "defaultPosition": {
+    "message": "預設視窗位置",
+    "description": ""
+  },
   "center": {
-		"message": "螢幕中央",
-		"description": ""
+    "message": "螢幕中央",
+    "description": ""
   },
   "topLeft": {
-		"message": "左上角",
-		"description": ""
+    "message": "左上角",
+    "description": ""
   },
   "bottomLeft": {
-		"message": "左下角",
-		"description": ""
+    "message": "左下角",
+    "description": ""
   },
   "topRight": {
-		"message": "右上角",
-		"description": ""
+    "message": "右上角",
+    "description": ""
   },
   "bottomRight": {
-		"message": "右下角",
-		"description": ""
+    "message": "右下角",
+    "description": ""
   },
-	"windowWidth": {
-		"message": "預設視窗寬度",
-		"description": ""
-	},
-	"windowHeight": {
-		"message": "預設視窗高度",
-		"description": ""
-	},
-	"iconColor": {
-		"message": "工具列圖示顏色",
-		"description": ""
-	},
-	"iconColorBlack": {
-		"message": "黑",
-		"description": ""
-	},
-	"iconColorWhite": {
-		"message": "白",
-		"description": ""
-	}
+  "windowWidth": {
+    "message": "預設視窗寬度",
+    "description": ""
+  },
+  "windowHeight": {
+    "message": "預設視窗高度",
+    "description": ""
+  },
+  "iconColor": {
+    "message": "工具列圖示顏色",
+    "description": ""
+  },
+  "iconColorBlack": {
+    "message": "黑",
+    "description": ""
+  },
+  "iconColorWhite": {
+    "message": "白",
+    "description": ""
+  }
 }
