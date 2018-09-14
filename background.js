@@ -316,6 +316,9 @@ const messageHandler = (message, sender, sendResponse) => {
       popupWindow(tab);
     });
   }
+  else if(message.action === 'ack') {
+    sendResponse({result:'ok'});
+  }
 };
 
 chrome.runtime.onMessage.addListener(messageHandler);
