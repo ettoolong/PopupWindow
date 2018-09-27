@@ -1,11 +1,13 @@
 let defaultPreference = {
   defaultPosition: 0,
+  windowPositionLeft: 0,
+  windowPositionTop: 0,
   windowWidth: 500,
   windowHeight: 400,
   openThisLink: true,
   moveThisPage: true,
   //iconColor: 0, //0:black, 1:white
-  version: 3
+  version: 4
 };
 let preferences = {};
 let menu_openThisLink = null;
@@ -138,7 +140,7 @@ const resetLinkMenu = () => {
 //   }
 // };
 
-const popupWindow = (tab, targetUrl) => {
+const popupWindow = (tab, targetUrl, winTop, winLeft) => {
   let screen = window.screen;
   let width = preferences.windowWidth;
   let height = preferences.windowHeight;
@@ -153,6 +155,10 @@ const popupWindow = (tab, targetUrl) => {
     top = sTop + Math.round((sHeight - height)/2);
     left = sLeft + Math.round((sWidth - width)/2);
   }
+  else if (preferences.defaultPosition === 5) {
+    top = preferences.windowPositionTop;
+    left = preferences.windowPositionLeft;
+  }
   else {
     if (preferences.defaultPosition === 2 || preferences.defaultPosition === 4) {
       top = sTop + sHeight - height;
@@ -165,6 +171,13 @@ const popupWindow = (tab, targetUrl) => {
         left = sLeft;
     }
   }
+  if(winTop) {
+    top = winTop;
+  }
+  if(winLeft) {
+    left = winLeft;
+  }
+
   let setting = {
     type: 'popup',
     top: top,
@@ -281,8 +294,16 @@ window.addEventListener('DOMContentLoaded', event => {
 const messageHandler = (message, sender, sendResponse) => {
   if(message.action === 'popupWindow') {
     chrome.tabs.get(message.tabId, tab => {
-      popupWindow(tab);
+      if(message.left && message.top) {
+        popupWindow(tab, null, message.left, message.top);
+      }
+      else {
+        popupWindow(tab);
+      }
     });
+  }
+  else if(message.action === 'ack') {
+    sendResponse({result:'ok'});
   }
 };
 

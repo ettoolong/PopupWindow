@@ -68,6 +68,23 @@ const setValueToElem = (id, value) => {
   }
 };
 
+const onDefaultPositionChange = () => {
+  let defaultPosition = document.getElementById('defaultPosition');
+  let elems = Array.from(document.querySelectorAll('.windowPosition'));
+
+  if(defaultPosition.value === '5') {
+    elems.forEach(tag => {
+      tag.classList.add('show');
+      tag.classList.remove('hidden');
+    });
+  } else {
+    elems.forEach(tag => {
+      tag.classList.add('hidden');
+      tag.classList.remove('show');
+    });
+  }
+}
+
 const init = preferences => {
   currentPrefs = preferences;
   for(let p in preferences) {
@@ -78,6 +95,11 @@ const init = preferences => {
   l10nTags.forEach(tag => {
     tag.textContent = chrome.i18n.getMessage(tag.getAttribute('data-l10n-id'));
   });
+  let defaultPosition = document.getElementById('defaultPosition');
+  defaultPosition.addEventListener('change', event=>{
+    onDefaultPositionChange();
+  });
+  onDefaultPositionChange();
 };
 
 window.addEventListener('load', event => {

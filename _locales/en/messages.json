@@ -1,82 +1,94 @@
 {
-	"extName": {
-		"message": "Popup window",
-		"description": ""
-	},
-	"extDescription": {
-		"message": "Move tab to standalone window, without tabs bar, navigation bar and bookmark bar UI.",
-		"description": ""
-	},
-	"optionPageTitle": {
-		"message": "Pop-up window Preferences",
-		"description": ""
-	},
+  "extName": {
+    "message": "Popup window",
+    "description": ""
+  },
+  "extDescription": {
+    "message": "Move tab to standalone window, without tabs bar, navigation bar and bookmark bar UI.",
+    "description": ""
+  },
+  "optionPageTitle": {
+    "message": "Pop-up window Preferences",
+    "description": ""
+  },
   "actionButtonTitle": {
-		"message": "Move current tab to pop-up window",
-		"description": ""
+    "message": "Move current tab to pop-up window",
+    "description": ""
   },
   "contextMenuItems": {
-		"message": "Context menu items:",
-		"description": ""
-	},
+    "message": "Context menu items:",
+    "description": ""
+  },
   "tabMenu": {
-		"message": "Tab menu item",
-		"description": ""
-	},
-	"openThisLink": {
-		"message": "Open this link in pop-up window",
-		"description": ""
-	},
-	"moveThisPage": {
-		"message": "pop-up/merge current page",
-		"description": ""
-	},
-	"moveThisTab": {
-		"message": "Move current tab to pop-up window",
-		"description": ""
-	},
-	"defaultPosition": {
-		"message": "Default pop-up window position",
-		"description": ""
-	},
+    "message": "Tab menu item",
+    "description": ""
+  },
+  "openThisLink": {
+    "message": "Open this link in pop-up window",
+    "description": ""
+  },
+  "moveThisPage": {
+    "message": "pop-up/merge current page",
+    "description": ""
+  },
+  "moveThisTab": {
+    "message": "Move current tab to pop-up window",
+    "description": ""
+  },
+  "defaultPosition": {
+    "message": "Default pop-up window position",
+    "description": ""
+  },
   "center": {
-		"message": "Center",
-		"description": ""
+    "message": "Center",
+    "description": ""
   },
   "topLeft": {
-		"message": "Top left corner",
-		"description": ""
+    "message": "Top left corner",
+    "description": ""
   },
   "bottomLeft": {
-		"message": "Bottom left corner",
-		"description": ""
+    "message": "Bottom left corner",
+    "description": ""
   },
   "topRight": {
-		"message": "Top right corner",
-		"description": ""
+    "message": "Top right corner",
+    "description": ""
   },
   "bottomRight": {
-		"message": "Bottom right corner",
-		"description": ""
+    "message": "Bottom right corner",
+    "description": ""
+	},
+	"customPosition": {
+    "message": "Custom position",
+    "description": ""
   },
-	"windowWidth": {
-		"message": "Default pop-up window width",
-		"description": ""
-	},
-	"windowHeight": {
-		"message": "Default pop-up window height",
-		"description": ""
-	},
-	"iconColor": {
-		"message": "Toolbar button icon color",
-		"description": ""
-	},
-	"iconColorBlack": {
-		"message": "Black",
-		"description": ""
-	},
-	"iconColorWhite": {
-		"message": "White",
-		"description": ""
-	}
+  "windowPositionLeft": {
+    "message": "Left",
+    "description": ""
+  },
+  "windowPositionTop": {
+    "message": "Top",
+    "description": ""
+  },
+  "windowWidth": {
+    "message": "Default pop-up window width",
+    "description": ""
+  },
+  "windowHeight": {
+    "message": "Default pop-up window height",
+    "description": ""
+  },
+  "iconColor": {
+    "message": "Toolbar button icon color",
+    "description": ""
+  },
+  "iconColorBlack": {
+    "message": "Black",
+    "description": ""
+  },
+  "iconColorWhite": {
+    "message": "White",
+    "description": ""
+  }
 }
