@@ -59,6 +59,18 @@
     "message": "右下角",
     "description": ""
   },
+  "customPosition": {
+    "message": "自訂位置",
+    "description": ""
+  },
+  "windowPositionLeft": {
+    "message": "左",
+    "description": ""
+  },
+  "windowPositionTop": {
+    "message": "上",
+    "description": ""
+  },
   "windowWidth": {
     "message": "預設視窗寬度",
     "description": ""

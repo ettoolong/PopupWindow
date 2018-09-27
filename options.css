@@ -6,6 +6,7 @@ div.col {
 .itemDiv {
   display: block;
   margin-top:4px;
+  min-height: 24px;
 }
 
 .itemLabel {
@@ -17,4 +18,20 @@ select.itemInput {
   display: inline-block;
   width: 250px;
   margin-left:12px;
+}
+
+input.windowPosition {
+  width:70px;
+}
+
+label.windowPosition {
+  margin-left: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inline-block;
 }

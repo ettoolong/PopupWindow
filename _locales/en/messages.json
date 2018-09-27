@@ -59,6 +59,18 @@
     "message": "Bottom right corner",
     "description": ""
   },
+  "customPosition": {
+    "message": "Custom position",
+    "description": ""
+  },
+  "windowPositionLeft": {
+    "message": "Left",
+    "description": ""
+  },
+  "windowPositionTop": {
+    "message": "Top",
+    "description": ""
+  },
   "windowWidth": {
     "message": "Default pop-up window width",
     "description": ""
