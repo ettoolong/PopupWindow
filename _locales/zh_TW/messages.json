@@ -90,5 +90,9 @@
   "iconColorWhite": {
     "message": "白",
     "description": ""
+  },
+  "execute": {
+    "message": "彈出/合併 頁面",
+    "description": ""
   }
 }

@@ -90,5 +90,9 @@
   "iconColorWhite": {
     "message": "White",
     "description": ""
+  },
+  "execute": {
+    "message": "Pop-up/Merge page",
+    "description": ""
   }
 }

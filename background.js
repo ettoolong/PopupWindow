@@ -6,7 +6,7 @@ let defaultPreference = {
   windowHeight: 400,
   openThisLink: true,
   moveThisPage: true,
-  //iconColor: 0, //0:black, 1:white
+  iconColor: 0, //0:black, 1:white
   version: 4
 };
 let preferences = {};
@@ -21,9 +21,9 @@ const storageChangeHandler = (changes, area) => {
     for (let item of changedItems) {
       preferences[item] = changes[item].newValue;
       switch (item) {
-        // case 'iconColor':
-        //   setBrowserActionIcon();
-        //   break;
+        case 'iconColor':
+          setBrowserActionIcon();
+          break;
         case 'openThisLink':
           resetLinkMenu();
           break;
@@ -67,7 +67,7 @@ const loadPreference = () => {
 
     resetLinkMenu();
     resetContextMenu();
-    //setBrowserActionIcon();
+    setBrowserActionIcon();
   });
 };
 
@@ -131,14 +131,14 @@ const resetLinkMenu = () => {
   }
 };
 
-// const setBrowserActionIcon = () => {
-//   if(preferences.iconColor === 1) {
-//     chrome.browserAction.setIcon({path: 'icon/icon_w.png'});
-//   }
-//   else {
-//     chrome.browserAction.setIcon({path: 'icon/icon.png'});
-//   }
-// };
+const setBrowserActionIcon = () => {
+  if(preferences.iconColor === 1) {
+    chrome.browserAction.setIcon({path: 'icon/icon_w.png'});
+  }
+  else {
+    chrome.browserAction.setIcon({path: 'icon/icon_b.png'});
+  }
+};
 
 const popupWindow = (tab, targetUrl, winTop, winLeft) => {
   let screen = window.screen;
@@ -289,6 +289,25 @@ function addToPopupMapping(window, originalWindowId) {
 
 window.addEventListener('DOMContentLoaded', event => {
   loadPreference();
+});
+
+chrome.commands.onCommand.addListener(command => {
+  if (command === "popupWindow") {
+    chrome.windows.getCurrent(windowInfo => {
+      chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+        if ((typeof tabs !== 'undefined') && (tabs.length > 0)) {
+          let tab = tabs[0];
+          if(windowInfo.type === 'popup') {
+            let popup = popupMapping.get(windowInfo.id);
+            mergeWindow(tab, popup ? popup.originalWindowId: null);
+          }
+          else {
+            popupWindow(tab);
+          }
+        }
+      });
+    });
+  }
 });
 
 const messageHandler = (message, sender, sendResponse) => {

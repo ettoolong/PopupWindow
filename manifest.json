@@ -2,7 +2,7 @@
   "description": "__MSG_extDescription__",
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "homepage_url": "https://github.com/ettoolong/PopupWindow",
   "icons": {
     "16": "icon/icon.png",
@@ -29,5 +29,13 @@
   "options_ui": {
     "page": "options.html",
     "open_in_tab": false
+  },
+  "commands": {
+    "popupWindow": {
+      "suggested_key": {
+        "default": "Alt+Shift+P"
+      },
+      "description": "__MSG_execute__"
+    }
   }
 }
