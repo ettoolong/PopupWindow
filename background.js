@@ -323,6 +323,25 @@ window.addEventListener('DOMContentLoaded', event => {
   loadPreference();
 });
 
+chrome.commands.onCommand.addListener(command => {
+  if (command === "popupWindow") {
+    chrome.windows.getCurrent(windowInfo => {
+      chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+        if ((typeof tabs !== 'undefined') && (tabs.length > 0)) {
+          let tab = tabs[0];
+          if(windowInfo.type === 'popup') {
+            let popup = popupMapping.get(windowInfo.id);
+            mergeWindow(tab, popup ? popup.originalWindowId: null);
+          }
+          else {
+            popupWindow(tab);
+          }
+        }
+      });
+    });
+  }
+});
+
 const messageHandler = (message, sender, sendResponse) => {
   if(message.action === 'popupWindow') {
     chrome.tabs.get(message.tabId, tab => {
