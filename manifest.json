@@ -2,7 +2,7 @@
   "description": "__MSG_extDescription__",
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "homepage_url": "https://github.com/ettoolong/PopupWindow",
   "icons": {
     "16": "icon/icon.svg",
@@ -26,7 +26,6 @@
   },
   "permissions": [
     "storage",
-    "tabs",
     "contextMenus"
   ],
   "browser_action": {
