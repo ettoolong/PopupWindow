@@ -172,10 +172,10 @@ const setBrowserActionIcon = () => {
   }
 };
 
-const popupWindow = (tab, targetUrl, winTop, winLeft) => {
+const popupWindow = (tab, targetUrl, winTop, winLeft, winWidth, winHeight) => {
   let screen = window.screen;
-  let width = preferences.windowWidth;
-  let height = preferences.windowHeight;
+  let width = winWidth ?? preferences.windowWidth;
+  let height = winHeight ?? preferences.windowHeight;
 
   let top = screen.availTop !== undefined ? screen.availTop: screen.top;
   let left = screen.availLeft !== undefined ? screen.availLeft: screen.left;
@@ -346,7 +346,7 @@ const messageHandler = (message, sender, sendResponse) => {
   if(message.action === 'popupWindow') {
     chrome.tabs.get(message.tabId, tab => {
       if(message.left && message.top) {
-        popupWindow(tab, null, message.left, message.top);
+        popupWindow(tab, null, message.left, message.top, message.width, message.height);
       } else {
         popupWindow(tab);
       }
