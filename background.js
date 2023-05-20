@@ -172,7 +172,7 @@ const setBrowserActionIcon = () => {
   }
 };
 
-const popupWindow = (tab, targetUrl, winTop, winLeft, winWidth, winHeight) => {
+const popupWindow = (tab, targetUrl, winLeft, winTop, winWidth, winHeight) => {
   let screen = window.screen;
   let width = winWidth ?? preferences.windowWidth;
   let height = winHeight ?? preferences.windowHeight;
