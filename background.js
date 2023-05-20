@@ -203,10 +203,10 @@ const popupWindow = (tab, targetUrl, winTop, winLeft, winWidth, winHeight) => {
         left = sLeft;
     }
   }
-  if(winTop) {
+  if(winTop !== undefined) {
     top = winTop;
   }
-  if(winLeft) {
+  if(winLeft !== undefined) {
     left = winLeft;
   }
 
