@@ -1,8 +1,9 @@
 {
   "description": "__MSG_extDescription__",
-  "manifest_version": 2,
+  "manifest_version": 3,
+  "minimum_chrome_version": "125",
   "name": "__MSG_extName__",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage_url": "https://github.com/ettoolong/PopupWindow",
   "icons": {
     "16": "icon/icon.png",
@@ -13,13 +14,15 @@
   },
   "author": "Ett Chung",
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "js/service-worker.js",
+    "type": "module"
   },
   "permissions": [
     "storage",
-    "contextMenus"
+    "contextMenus",
+    "system.display"
   ],
-  "browser_action": {
+  "action": {
     "browser_style": true,
     "default_title": "__MSG_actionButtonTitle__",
     "default_icon": "icon/icon.png"
